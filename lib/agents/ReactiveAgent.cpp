@@ -15,10 +15,9 @@ void ReactiveAgent::SenseAndMove(void) {
   float distance = sensor.DistanceMeasure();
   while (distance > 100) {
     driver_.Foward(CalcSpeed(distance));
-    delay(10000);
     distance = sensor.DistanceMeasure();
   }
-  // we are 1 meter fro the wall
+  // we are 1 meter from the wall
   // stop the car
   driver_.Stop();
 }
