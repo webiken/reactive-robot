@@ -14,7 +14,7 @@ class UltraSonicSensor: public Sensor {
     Constructors
    */
   UltraSonicSensor(){};
-  Ultrasonic::UltraSonicSensor(int pin){
+  UltraSonicSensor(int pin){
     pin_ = pin;
   }
   /*

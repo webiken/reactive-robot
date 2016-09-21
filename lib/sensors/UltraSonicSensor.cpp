@@ -3,7 +3,7 @@
 /*
   Begin the detection and get the pulse back signal
 */
-float Ultrasonic::DistanceMeasure(void) {
+float UltraSonicSensor::DistanceMeasure(void) {
   pinMode(pin_, OUTPUT);
   digitalWrite(pin_, LOW);
   
@@ -23,7 +23,7 @@ float Ultrasonic::DistanceMeasure(void) {
   We devide by 29 which is the speed of sound in cm,
   then devide by 2 since the sound echos and travels back
 */
-float Ultrasonic::microseconds_to_centimeters(float duration){
+float UltraSonicSensor::microseconds_to_centimeters(float duration){
   return duration/29/2;
 }
 
