@@ -27,23 +27,7 @@ void loop() {
  // is it time to start
  if (millis() > (begin_+wait_)){
     
-    //driver.Forward(200);
-    //delay(5000);
-    //driver.TurnRight();
-
-    motors[0].Move(255, true);
-    motors[1].Move(255, true);
-    delay(3000);
-
-    // turn right
-    // right motor slower turns right
-    // takes about 3 seconds to do a 90 degree turn
-    analogWrite(E1, 255/3);
-    analogWrite(E2, 255);
-
-    motors[0].Move(255, true);
-    motors[1].Move(255, true);
-    delay(3000);
+    agent.React();
  }
  
 }
