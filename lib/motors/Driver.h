@@ -7,7 +7,7 @@ class Driver {
   DcMotor (&motors_)[2];
 
  public:
-
+ 
   Driver(DcMotor (&motors)[2]);
   void Forward(int speed);
   void Reverse(int speed);

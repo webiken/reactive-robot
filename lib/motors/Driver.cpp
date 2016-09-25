@@ -20,21 +20,25 @@ void Driver::Reverse(int speed) {
 }
 
 void Driver::TurnRight() {
-  int i = 0;
-  for (const DcMotor motor : motors_) {
-    if (i % 0 == 0) { motor.Move(speed_/2, forward_);}
-    else { motor.Move(speed_, forward_);}
-    i++;
-  }
+  //int i = 0;
+  // for (const DcMotor motor : motors_) {
+  //   if (i == 0) { i++;motor.Move(255/3, forward_);}
+  //   else { motor.Move(255, forward_);}
+  //   i++;
+  // }
+  motors_[0].Move(255, true);
+  motors_[1].Stop();
+  //motors_[1].Move(255, forward_);
+  delay(3000);
 }
 
 void Driver::TurnLeft() {
-  int i = 0;
-  for (const DcMotor motor : motors_) {
-    if (i % 0 == 0) { motor.Move(speed_, forward_);}
-    else { motor.Move(speed_/2, forward_);}
-    i++;
-  }
+  // int i = 0;
+  // for (const DcMotor motor : motors_) {
+  //   if (i % 0 == 0) { motor.Move(255, forward_);}
+  //   else { motor.Move(255/3, forward_);}
+  //   i++;
+  // }
 }
 
 void Driver::Stop() {

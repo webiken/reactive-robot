@@ -27,3 +27,6 @@ float UltraSonicSensor::microseconds_to_centimeters(float duration){
   return duration/29/2;
 }
 
+float UltraSonicSensor::Sense(void) {
+  return DistanceMeasure();
+} 

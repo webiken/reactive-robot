@@ -5,13 +5,17 @@
 #include "Driver.h"
 
 class ReactiveAgent {
+  Sensor* (&sensors_)[1];
+  Driver (&driver_);
+
  public:
+  
   ReactiveAgent(void);
-  ReactiveAgent(UltraSonicSensor sensor, Driver driver);
+  ReactiveAgent(Sensor* (&sensors)[1], Driver (&driver));
   void React(void);
+
+  void SenseAndMove(void);
  private:
-  UltraSonic sensor_;
-  Driver driver_;
   
   /* these are part of the formula
   y = a_ * x + b;
@@ -24,7 +28,7 @@ class ReactiveAgent {
   /* used to calculate the formula above */
   int CalcSpeed(double distance);
 
-  void SenseAndMove(void);
+  
 };
 
 #endif // SROBOT_AGENTS_REACTIVE_H_

@@ -22,6 +22,7 @@ class LaserSensor: public Sensor {
     
    */
   LaserSensor(){};
+  virtual int Sense() override {return 10;};
 };
 
 #endif // SROBOT_SENSORS_LASER_H_

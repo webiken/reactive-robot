@@ -6,7 +6,7 @@ ARDMK_DIR         = $(PROJECT_DIR)/Arduino-Makefile
 ### ARDUINO_DIR
 ### Path to the Arduino application and resources directory.
 ARDUINO_DIR        = /Applications/Arduino.app/Contents/Java
-ARDUINO_LIBS       = list agents sensors motors
+ARDUINO_LIBS       = agents sensors motors
 USER_LIB_PATH     :=  $(PROJECT_DIR)/lib
 BOARD_TAG          = mega
 BOARD_SUB          = atmega2560
