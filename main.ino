@@ -21,13 +21,12 @@ long wait_ = 1100;
   
 void setup() {
   Serial.begin(9600);
+  pinMode(2, OUTPUT);
+  
 }
 
 void loop() {
  // is it time to start
- if (millis() > (begin_+wait_)){
-    
-    agent.React();
- }
+ analogWrite(2, 150);
  
 }
