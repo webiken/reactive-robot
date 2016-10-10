@@ -8,8 +8,9 @@ class UltraSonicSensor: public Sensor {
  public:
   /* Constructors */
   UltraSonicSensor(){};
-  UltraSonicSensor(int pin){
-    pin_ = pin;
+  UltraSonicSensor(int sigPin){
+    sigPin_ = sigPin;
+    
   };
   
   /* override base class' method */
@@ -24,7 +25,9 @@ class UltraSonicSensor: public Sensor {
     Class only suppports Metric
    */
   float microseconds_to_centimeters(float duration);
-  int pin_;
+  int sigPin_;
+  int high_;
+  int low_;
   float duration_;
 };
 

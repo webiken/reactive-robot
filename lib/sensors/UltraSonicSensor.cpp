@@ -4,16 +4,17 @@
   Begin the detection and get the pulse back signal
 */
 float UltraSonicSensor::DistanceMeasure(void) {
-  pinMode(pin_, OUTPUT);
-  digitalWrite(pin_, LOW);
+  
+  pinMode(sigPin_, OUTPUT);
+  digitalWrite(sigPin_, LOW);
   
   delayMicroseconds(2);
-  digitalWrite(pin_, HIGH);
+  digitalWrite(sigPin_, HIGH);
   delayMicroseconds(5);
 
-  digitalWrite(pin_,LOW);
-  pinMode(pin_,INPUT);
-  duration_ = pulseIn(pin_,HIGH);
+  digitalWrite(sigPin_,LOW);
+  pinMode(sigPin_,INPUT);
+  duration_ = pulseIn(sigPin_,HIGH);
   return microseconds_to_centimeters(duration_);
 }
 

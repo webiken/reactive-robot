@@ -6,10 +6,10 @@ ARDMK_DIR         = $(PROJECT_DIR)/Arduino-Makefile
 ### ARDUINO_DIR
 ### Path to the Arduino application and resources directory.
 ARDUINO_DIR        = /usr/lib/arduino
-ARDUINO_LIBS       = agents sensors motors
+ARDUINO_LIBS       = driver agents sensors motorshield Wire SoftwareSerial
 USER_LIB_PATH     :=  $(PROJECT_DIR)/lib
-BOARD_TAG          = mega
-BOARD_SUB          = atmega2560
+BOARD_TAG          = uno
+#BOARD_SUB          = atmega2560
 
 ### MONITOR_BAUDRATE
 ### It must be set to Serial baudrate value you are using.
